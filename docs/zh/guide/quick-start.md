@@ -21,7 +21,7 @@ wget https://xmake.io/shget.text -O - | bash
 ```
 
 ```powershell [powershell]
-Invoke-Expression (Invoke-Webrequest 'https://xmake.io/psget.text' -UseBasicParsing).Content
+Invoke-Expression ([System.Text.Encoding]::UTF8.GetString((Invoke-Webrequest 'https://xmake.io/psget.text' -UseBasicParsing).Content))
 ```
 
 :::
